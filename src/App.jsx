@@ -1,26 +1,27 @@
 import React from 'react'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from '../pages/Home'
 import About from '../pages/About'
-import Profile from '../pages/Profile' 
-
-import Signout from '../pages/Signout'
+import Home from '../pages/Home'
+import Profile from '../pages/Profile'
 import SignInPage from '../pages/SignInPage'
-import Header from './components/Header'
+import Signout from '../pages/Signout'
+import Headline from './components/Headline'
 
-export default function Signin() {
-  return ( 
-  <BrowserRouter>
-  <Header/>
-  <Routes>
-    <Route path='/' element={<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/profile' element={<Profile/>}/>
-    <Route path='/signinpage' element={<SignInPage/>}/>
-    <Route path='/signout' element={<Signout/>}/>
+export default function App() {
+  return (
+    <BrowserRouter>
+   <Headline/>
+  
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/signout' element={<Signout/>}/>
+      <Route path='/signin' element={<SignInPage/>}/>
 
-
-  </Routes>
-  </BrowserRouter>
+    </Routes>
+    </BrowserRouter>
   )
 }
+
